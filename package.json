@@ -10,12 +10,16 @@
   ],
   "scripts": {
     "build": "npx tsc",
+    "build:demo": "esbuild docs/main.ts --bundle --format=esm --platform=browser --outfile=docs/assets/main.js",
+    "preview:demo": "yarn build:demo && npx serve docs",
     "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "esbuild": "^0.25.5",
+    "serve": "^14.2.4",
     "typescript": "^4.7.4"
   }
 }

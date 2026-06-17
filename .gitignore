@@ -12,6 +12,9 @@ lib
 es
 dist
 build
+docs/assets
+docs/main.js
+docs/main.d.ts
 coverage
 .eslintcache
 yarn-error.log

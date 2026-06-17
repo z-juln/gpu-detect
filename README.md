@@ -2,6 +2,16 @@
 
 基于 WebGL 的浏览器 GPU 档位检测库，从 Unicorn 渲染性能优化逻辑中抽离。
 
+## demo
+
+在线演示：[https://z-juln.github.io/gpu-detect/](https://z-juln.github.io/gpu-detect/)
+
+本地预览：
+
+```bash
+yarn preview:demo
+```
+
 ## install
 
 ```bash
@@ -31,13 +41,15 @@ if (isHighEndDevice()) {
 
 ## API
 
-| 导出 | 说明 |
-| --- | --- |
-| `detectWebGLGpuInfo()` | 检测 GPU 档位、渲染器名称、最大纹理尺寸（结果缓存） |
-| `isHighEndDevice()` | `tier === WebGLGpuTier.High` 时返回 `true` |
-| `clearWebGLGpuCache()` | 清除缓存，用于测试 |
-| `WebGLGpuTier` | GPU 档位枚举 |
-| `WebGLGpuInfo` | 检测结果类型 |
+
+| 导出                     | 说明                                      |
+| ---------------------- | --------------------------------------- |
+| `detectWebGLGpuInfo()` | 检测 GPU 档位、渲染器名称、最大纹理尺寸（结果缓存）            |
+| `isHighEndDevice()`    | `tier === WebGLGpuTier.High` 时返回 `true` |
+| `clearWebGLGpuCache()` | 清除缓存，用于测试                               |
+| `WebGLGpuTier`         | GPU 档位枚举                                |
+| `WebGLGpuInfo`         | 检测结果类型                                  |
+
 
 ## WebGLGpuTier 档位说明
 
@@ -63,8 +75,11 @@ CPU 软件渲染，无真实 GPU 硬件加速。典型 renderer 包括 SwiftShad
 
 ## WebGLGpuInfo 字段
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-| `tier` | `WebGLGpuTier` | 性能档位 |
-| `renderer` | `string \| null` | GPU 渲染器名称；无法获取时为 `null` |
-| `maxTextureSize` | `number \| null` | WebGL 支持的最大纹理边长（像素）；无法获取时为 `null` |
+
+| 字段               | 类型              | 说明                                |
+| ---------------- | --------------- | --------------------------------- |
+| `tier`           | `WebGLGpuTier`  | 性能档位                              |
+| `renderer`       | `string | null` | GPU 渲染器名称；无法获取时为 `null`           |
+| `maxTextureSize` | `number | null` | WebGL 支持的最大纹理边长（像素）；无法获取时为 `null` |
+
+

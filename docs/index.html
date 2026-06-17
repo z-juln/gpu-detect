@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gpu-detect — GPU 信息检测</title>
+    <meta
+      name="description"
+      content="基于 WebGL 的浏览器 GPU 档位检测演示，查看当前设备的 GPU tier、renderer 与纹理规格。"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <p class="eyebrow">gpu-detect demo</p>
+        <h1>当前设备 GPU 信息</h1>
+        <p class="subtitle">在浏览器中通过 WebGL 检测 GPU 档位、渲染器名称与最大纹理尺寸。</p>
+        <div class="hero-actions">
+          <button id="refresh" type="button" class="button">重新检测</button>
+          <a class="button button-ghost" href="https://github.com/z-juln/gpu-detect" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+      </header>
+
+      <main id="app" class="grid" aria-live="polite"></main>
+
+      <footer class="footer">
+        <p>检测结果仅在本地浏览器执行，不会上传到服务器。</p>
+      </footer>
+    </div>
+
+    <script type="module" src="./assets/main.js"></script>
+  </body>
+</html>
